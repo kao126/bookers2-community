@@ -1,5 +1,5 @@
 <div class="form">
-  <%= form_with url: groups_path, model: group do |f| %>
+  <%= form_with model: group do |f| %>
     <div class="form-group">
       <%= f.label "グループ名" %>
       <%= f.text_field :name, class: "form-control" %>
@@ -13,7 +13,7 @@
       <%= f.file_field :group_image, accept: "image/*" %>
     </div>
     <div>
-      <%= f.submit "Create Group",class: "btn btn-primary" %>
+      <%= f.submit class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
