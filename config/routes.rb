@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'groups/index'
+  get 'groups/new'
+  get 'groups/edit'
   devise_for :users
   root to: "homes#top"
   get "home/about" => "homes#about"
