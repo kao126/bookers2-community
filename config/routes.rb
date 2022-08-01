@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'groups/index'
-  get 'groups/new'
-  get 'groups/edit'
   devise_for :users
   root to: "homes#top"
   get "home/about" => "homes#about"
@@ -17,5 +14,6 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followed'
   end
 
+  resources :groups, except: [:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
