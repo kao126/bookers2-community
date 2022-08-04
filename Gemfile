@@ -57,3 +57,5 @@ gem 'devise'
 gem 'pry-byebug'
 gem 'jquery-rails'
 
+gem 'dotenv-rails'
+
